@@ -12,7 +12,7 @@ const WhatsAppButton = () => {
     <Button
       asChild
       size="icon"
-      className="fixed bottom-20 right-4 md:bottom-4 md:right-20 rounded-full h-14 w-14 shadow-lg z-50 bg-[#25D366] hover:bg-[#128C7E] text-white"
+      className="fixed bottom-4 right-4 rounded-full h-14 w-14 shadow-lg z-50 bg-[#25D366] hover:bg-[#128C7E] text-white"
     >
       <Link
         href={`https://wa.me/${phoneNumber}?text=${message}`}
