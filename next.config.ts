@@ -5,9 +5,7 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // Note: eslint config has been moved to package.json or .eslintrc for Next.js 16
   images: {
     remotePatterns: [
       {
