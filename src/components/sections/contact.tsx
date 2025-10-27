@@ -39,29 +39,13 @@ const Contact = () => {
 								<MapPin className="h-6 w-6 text-primary" />
 								<span>Belo Horizonte e Região Metropolitana, MG</span>
 							</div>
-						</div>
-						<div className="mt-6">
-							<h4 className="text-lg font-semibold text-primary mb-3">
-								Siga-nos
-							</h4>
-							<div className="flex space-x-4">
-								<a
-									href="#"
-									className="text-muted-foreground hover:text-primary transition-colors"
-								>
-									<Facebook className="h-6 w-6" />
-								</a>
+							<div className="flex items-center gap-4">
 								<a
 									href="#"
 									className="text-muted-foreground hover:text-primary transition-colors"
 								>
 									<Instagram className="h-6 w-6" />
-								</a>
-								<a
-									href="#"
-									className="text-muted-foreground hover:text-primary transition-colors"
-								>
-									<Linkedin className="h-6 w-6" />
+									<span>Instagram</span>
 								</a>
 							</div>
 						</div>
