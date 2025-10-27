@@ -10,7 +10,7 @@ const About = () => {
 						Nossa jornada de excelência em serviços elétricos e industriais.
 					</p>
 				</div>
-				<div className="max-w-4xl mx-auto">
+				<div className="max-w-6xl mx-auto">
 					<div className="space-y-6 text-foreground/90 text-base leading-relaxed">
 						<p>
 							Fundada em 2020 por Geraldo Magela, um profissional com vasta
