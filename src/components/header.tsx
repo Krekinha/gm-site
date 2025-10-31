@@ -9,11 +9,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-	{ name: "Sobre", href: "#about" },
+	{ name: "Sobre a GM", href: "#about" },
 	{ name: "Serviços", href: "#services" },
 	{ name: "Depoimentos", href: "#testimonials" },
-	{ name: "Normas", href: "#compliance" },
-	{ name: "Blog", href: "/blog" },
+	{ name: "Conformidade", href: "#compliance" },
 	{ name: "Contato", href: "#contact" },
 ];
 
