@@ -10,7 +10,7 @@ const complianceItems = [
   {
     icon: <FileText className="h-10 w-10 text-primary" />,
     title: 'CREA-MG e ART',
-    description: 'Somos registrados no CREA-MG e contamos com o apoio de um engenheiro eletricista para a emissão de Anotação de Responsabilidade Técnica (ART).',
+    description: 'Estamos devidamente registrados no CREA-MG e contamos com o apoio de engenheiros qualificados para emitir ARTs em nossos projetos.',
   },
   {
     icon: <HardHat className="h-10 w-10 text-primary" />,

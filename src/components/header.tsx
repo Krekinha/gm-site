@@ -45,7 +45,7 @@ const Header = () => {
 			className={cn(
 				"fixed top-0 left-0 right-0 z-50 transition-all duration-300",
 				isScrolled
-					? "bg-background/80 backdrop-blur-sm shadow-md"
+					? "bg-[rgb(0,34,51)]/95 backdrop-blur-sm shadow-md"
 					: "bg-transparent",
 			)}
 		>
@@ -66,7 +66,7 @@ const Header = () => {
 								<Link
 									href={link.href}
 									onClick={(e) => handleLinkClick(e, link.href)}
-									className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+									className="text-lg font-medium text-white hover:text-white/80 transition-colors"
 								>
 									{link.name}
 								</Link>
@@ -78,7 +78,11 @@ const Header = () => {
 					<div className="md:hidden">
 						<Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
 							<SheetTrigger asChild>
-								<Button variant="ghost" size="icon">
+								<Button
+									variant="ghost"
+									size="icon"
+									className="text-white hover:text-white/80"
+								>
 									<Menu className="h-6 w-6" />
 									<span className="sr-only">Abrir menu</span>
 								</Button>
