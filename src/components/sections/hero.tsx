@@ -9,7 +9,9 @@ const Hero = () => {
 
 	const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
-		document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+		document
+			.querySelector("#orcamento-form")
+			?.scrollIntoView({ behavior: "smooth" });
 	};
 
 	return (
@@ -68,7 +70,7 @@ const Hero = () => {
 								size="lg"
 								className="bg-accent hover:bg-accent/90 text-accent-foreground"
 							>
-								<Link href="#contact" onClick={handleScrollToContact}>
+								<Link href="#orcamento-form" onClick={handleScrollToContact}>
 									Solicite um Orçamento Gratuito
 								</Link>
 							</Button>
