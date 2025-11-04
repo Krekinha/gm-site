@@ -31,18 +31,18 @@ const Hero = () => {
 			)}
 
 			{/* Overlay Escuro */}
-			<div className="absolute inset-0 bg-black/60 z-10" />
+			<div className="absolute inset-0 bg-black/25 z-10" />
 
 			{/* Conteúdo */}
 			<div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 h-full">
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center h-full">
-					<div className="text-center md:text-left">
+				<div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-12 items-center h-full">
+					<div className="text-center md:text-left md:col-start-2">
 						<div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
 							<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-								Manutenções Elétricas e Industriais
+								Manutenções e Instalações Elétricas Para Sua Empresa
 							</h1>
 							<p className="mt-2 text-2xl md:text-3xl font-semibold text-accent">
-								Rápidas e Confiáveis em Belo Horizonte e Região
+								Confiança Conectada à Sua Rede
 							</p>
 						</div>
 						<p
@@ -50,8 +50,15 @@ const Hero = () => {
 							style={{ animationDelay: "0.4s" }}
 						>
 							Desde 2020, prestando serviços de manutenção e instalação elétrica
-							para empresas e indústrias.
+							para empresas e indústrias
 						</p>
+						<p
+							className="mt-4 max-w-xl mx-auto md:mx-0 text-lg md:text-xl text-white/90 animate-fade-in"
+							style={{ animationDelay: "0.4s" }}
+						>
+							Atendemos Belo Horizonte e Região Metropolitana
+						</p>
+
 						<div
 							className="mt-8 animate-fade-in"
 							style={{ animationDelay: "0.6s" }}
