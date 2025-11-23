@@ -139,7 +139,10 @@ const ServiceCard = ({ image, title, description }: ServiceCardProps) => {
 const Services = () => {
 	return (
 		/* eslint-disable-next-line */
-		<section id="services" className="bg-secondary py-16">
+		<section
+			id="services"
+			className="bg-[radial-gradient(circle_at_center,_#EDFAFF,_#9ECFFF)] py-16"
+		>
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-12">
 					<h2 className="text-3xl md:text-4xl font-bold text-primary">

@@ -10,7 +10,10 @@ import { ContactForm } from "@/components/contact-form";
 
 const Contact = () => {
 	return (
-		<section id="contact" className="bg-background">
+		<section
+			id="contact"
+			className="bg-[radial-gradient(circle_at_center,_#EDFAFF,_#9ECFFF)]"
+		>
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-12">
 					<h2 className="text-3xl md:text-4xl font-bold text-primary">
@@ -50,7 +53,10 @@ const Contact = () => {
 							</div>
 						</div>
 					</div>
-					<div id="orcamento-form" className="bg-card p-8 rounded-lg shadow-md scroll-mt-24">
+					<div
+						id="orcamento-form"
+						className="bg-card p-8 rounded-lg shadow-md scroll-mt-24"
+					>
 						<h3 className="text-2xl font-semibold mb-6 text-primary">
 							Solicite seu Orçamento
 						</h3>
