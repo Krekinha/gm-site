@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const Hero = () => {
-	const heroImage = PlaceHolderImages.find((p) => p.id === "hero-background");
+	const heroImage = PlaceHolderImages.find((p) => p.id === "hero-image");
 
 	const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
@@ -17,20 +17,24 @@ const Hero = () => {
 	return (
 		<section
 			id="home"
-			className="relative w-full min-h-[600px] md:min-h-[700px] pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-20"
+			className="relative w-full min-h-[600px] md:min-h-[700px] pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-20 bg-gradient-to-t from-[#2c70b5] to-[#003366] "
 		>
-			{/* Background Image */}
-			{heroImage && (
-				<Image
-					src={heroImage.imageUrl}
-					alt={heroImage.description}
-					fill
-					priority
-					className="object-cover z-0"
-					data-ai-hint={heroImage.imageHint}
-					sizes="100vw"
-				/>
-			)}
+
+
+			{/* Background Image - Absolute Left */}
+			<div className="absolute left-0 bottom-0 w-[40%] h-full z-10 hidden md:block">
+				{heroImage && (
+					<Image
+						src={heroImage.imageUrl}
+						alt={heroImage.description}
+						priority
+						fill
+						className="object-contain object-left-bottom"
+						data-ai-hint={heroImage.imageHint}
+						sizes="40vw"
+					/>
+				)}
+			</div>
 
 			{/* Overlay Escuro */}
 			<div className="absolute inset-0 bg-black/25 z-10" />
@@ -38,6 +42,9 @@ const Hero = () => {
 			{/* Conteúdo */}
 			<div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 h-full">
 				<div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-12 items-center h-full">
+					<div className="hidden md:block">
+						{/* Spacer for the absolute image */}
+					</div>
 					<div className="text-center md:text-left md:col-start-2">
 						<div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
 							<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">

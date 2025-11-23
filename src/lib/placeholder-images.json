@@ -7,6 +7,12 @@
 			"imageHint": "technician electrical"
 		},
 		{
+			"id": "hero-image",
+			"description": "A technician working on an electrical panel.",
+			"imageUrl": "/images/sections/hero/hero-eletricista.png",
+			"imageHint": "technician electrical"
+		},
+		{
 			"id": "portfolio-1",
 			"description": "Installation of a new industrial machine.",
 			"imageUrl": "https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbmR1c3RyaWFsJTIwbWFjaGluZXxlbnwwfHx8fDE3NjExMjM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
