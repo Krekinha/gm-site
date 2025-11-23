@@ -19,8 +19,6 @@ const Hero = () => {
 			id="home"
 			className="relative w-full min-h-[600px] md:min-h-[700px] pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-20 bg-gradient-to-t from-[#2c70b5] to-[#003366] "
 		>
-
-
 			{/* Background Image - Absolute Left */}
 			<div className="absolute left-0 bottom-0 w-[40%] h-full z-10 hidden md:block">
 				{heroImage && (
@@ -29,7 +27,7 @@ const Hero = () => {
 						alt={heroImage.description}
 						priority
 						fill
-						className="object-contain object-left-bottom"
+						className="object-cover object-right-bottom"
 						data-ai-hint={heroImage.imageHint}
 						sizes="40vw"
 					/>
