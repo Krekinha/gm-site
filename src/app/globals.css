@@ -60,6 +60,9 @@
 		@apply bg-background text-foreground;
 	}
 	section {
-		@apply py-12 sm:py-16 md:py-20 lg:py-24;
+		@apply py-12 sm:py-16 md:py-20 lg:py-24 border-b;
+	}
+	.section-lifted {
+		@apply relative z-10 shadow-[0_0_20px_rgba(0,0,0,0.05)];
 	}
 }
