@@ -49,7 +49,7 @@ const Hero = () => {
 						w-[212px] h-auto 
 						mr-4 
 						mb-4
-						mt-8
+						mt-12
 						-ml-4 sm:-ml-6
 						[shape-outside:url('/images/sections/hero/hero-eletricista-mobile.png')]
 						[shape-image-threshold:0.5]
@@ -58,7 +58,7 @@ const Hero = () => {
 					/>
 					<div className="text-right">
 						<div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-							<h1 className="text-4xl font-bold text-white tracking-tight leading-tight">
+							<h1 className="text-3xl font-bold text-white tracking-tight leading-tight">
 								Manutenções e Instalações Elétricas Para Sua Empresa
 							</h1>
 							<p className="mt-2 text-2xl font-semibold text-accent">
