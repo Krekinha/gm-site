@@ -49,6 +49,7 @@ const Hero = () => {
 						w-[280px] h-auto 
 						mr-4 
 						mb-4
+						-ml-4 sm:-ml-6
 						[shape-outside:url('/images/sections/hero/hero-eletricista-mobile.png')]
 						[shape-image-threshold:0.5]
 						[shape-margin:1rem]
@@ -74,7 +75,7 @@ const Hero = () => {
 							className="mt-4 text-lg text-white/90 animate-fade-in"
 							style={{ animationDelay: "0.4s" }}
 						>
-							Atendemos Belo Horizonte e Região Metropolitana
+							Em Belo Horizonte e Região Metropolitana
 						</p>
 					</div>
 					{/* Clear float to ensure button is below */}
