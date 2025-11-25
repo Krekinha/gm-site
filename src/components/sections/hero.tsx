@@ -51,6 +51,7 @@ const Hero = () => {
 						mb-4
 						mt-12
 						-ml-4 sm:-ml-6
+						opacity-70
 						[shape-outside:url('/images/sections/hero/hero-eletricista-mobile.png')]
 						[shape-image-threshold:0.5]
 						[shape-margin:1rem]
