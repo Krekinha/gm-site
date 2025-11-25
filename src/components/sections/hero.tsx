@@ -49,6 +49,7 @@ const Hero = () => {
 						w-[212px] h-auto 
 						mr-4 
 						mb-4
+						mt-8
 						-ml-4 sm:-ml-6
 						[shape-outside:url('/images/sections/hero/hero-eletricista-mobile.png')]
 						[shape-image-threshold:0.5]
