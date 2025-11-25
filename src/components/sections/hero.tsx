@@ -46,7 +46,7 @@ const Hero = () => {
 						alt="Eletricista GM Manutenções"
 						className="
 						float-left 
-						w-[280px] h-auto 
+						w-[212px] h-auto 
 						mr-4 
 						mb-4
 						-ml-4 sm:-ml-6
