@@ -79,6 +79,7 @@ const Testimonials = () => {
 									<div className="flex mt-4">
 										{Array.from({ length: testimonial.rating }).map((_, i) => (
 											<Star
+												// biome-ignore lint/suspicious/noArrayIndexKey: rating stars are static
 												key={i}
 												className="h-5 w-5 fill-accent text-accent"
 											/>

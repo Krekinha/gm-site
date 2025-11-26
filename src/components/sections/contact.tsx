@@ -41,7 +41,7 @@ const Contact = () => {
 							</div>
 							<div className="flex items-center gap-4">
 								<a
-									href="#"
+									href="/"
 									className="text-muted-foreground hover:text-primary transition-colors"
 								>
 									<Instagram className="h-6 w-6" />

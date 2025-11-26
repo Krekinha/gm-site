@@ -38,7 +38,7 @@ const Compliance = () => {
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 					{complianceItems.map((item, index) => (
 						<Card
-							key={index}
+							key={item.title}
 							className="text-center hover:shadow-lg transition-shadow duration-300"
 						>
 							<CardHeader className="items-center">
