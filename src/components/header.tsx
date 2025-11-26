@@ -1,19 +1,32 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import {
+	Briefcase,
+	Info,
+	Menu,
+	MessageSquareQuote,
+	Phone,
+	ShieldCheck,
+	X,
+} from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Logo from "@/components/logo";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+	Sheet,
+	SheetContent,
+	SheetTitle,
+	SheetTrigger,
+} from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-	{ name: "Sobre a GM", href: "#about" },
-	{ name: "Serviços", href: "#services" },
-	{ name: "Depoimentos", href: "#testimonials" },
-	{ name: "Conformidade", href: "#compliance" },
-	{ name: "Contato", href: "#contact" },
+	{ name: "Sobre a GM", href: "#about", icon: Info },
+	{ name: "Serviços", href: "#services", icon: Briefcase },
+	{ name: "Depoimentos", href: "#testimonials", icon: MessageSquareQuote },
+	{ name: "Conformidade", href: "#compliance", icon: ShieldCheck },
+	{ name: "Contato", href: "#contact", icon: Phone },
 ];
 
 const Header = () => {
@@ -78,39 +91,35 @@ const Header = () => {
 					<div className="md:hidden">
 						<Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
 							<SheetTrigger asChild>
-								<Button
-									variant="ghost"
-									size="icon"
+								<button
+									type="button"
 									className="text-white hover:text-white/80"
 								>
-									<Menu className="h-6 w-6" />
+									<Menu className="h-10 w-10" />
 									<span className="sr-only">Abrir menu</span>
-								</Button>
+								</button>
 							</SheetTrigger>
-							<SheetContent side="right" className="w-full bg-background p-0">
+							<SheetContent
+								side="right"
+								className="bg-[#003366ff] border-none p-0 text-white"
+							>
+								<SheetTitle className="sr-only">Menu de Navegação</SheetTitle>
 								<div className="flex flex-col h-full">
-									<div className="flex justify-between items-center p-4 border-b">
+									<div className="flex justify-center items-center p-4 border-b border-white/10">
 										<Link href="/" onClick={(e) => handleLinkClick(e, "#home")}>
 											<Logo className="h-12 w-auto" />
 										</Link>
-										<Button
-											variant="ghost"
-											size="icon"
-											onClick={() => setMobileMenuOpen(false)}
-										>
-											<X className="h-6 w-6" />
-											<span className="sr-only">Fechar menu</span>
-										</Button>
 									</div>
-									<nav className="flex-1 flex flex-col items-center justify-center space-y-6">
+									<nav className="flex-1 flex flex-col items-start justify-start pt-8 px-6 space-y-6">
 										{navLinks.map((link) => (
 											<Link
 												key={link.name}
 												href={link.href}
 												onClick={(e) => handleLinkClick(e, link.href)}
-												className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+												className="flex items-center space-x-4 text-lg font-medium text-white hover:text-white/80 transition-colors w-full"
 											>
-												{link.name}
+												<link.icon className="h-5 w-5" />
+												<span>{link.name}</span>
 											</Link>
 										))}
 									</nav>
