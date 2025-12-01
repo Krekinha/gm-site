@@ -1,11 +1,4 @@
-import {
-	Facebook,
-	Instagram,
-	Linkedin,
-	Mail,
-	MapPin,
-	Phone,
-} from "lucide-react";
+import { Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 
 const Contact = () => {
@@ -29,24 +22,49 @@ const Contact = () => {
 						<div className="space-y-4 text-foreground/90">
 							<div className="flex items-center gap-4">
 								<Mail className="h-6 w-6 text-primary" />
-								<span>contato@gmmanutencoes.com.br</span>
+								<a
+									href="mailto:contato@gmmanutencoes.com.br"
+									className="hover:text-primary transition-colors"
+								>
+									contato@gmmanutencoes.com.br
+								</a>
 							</div>
 							<div className="flex items-center gap-4">
 								<Phone className="h-6 w-6 text-primary" />
-								<span>(31) 99999-9999</span>
+								<a
+									href="tel:+5531994650007"
+									className="hover:text-primary transition-colors"
+								>
+									(31) 99465-0007
+								</a>
+							</div>
+							<div className="flex items-center gap-4">
+								<MessageCircle className="h-6 w-6 text-primary" />
+								<a
+									href="https://wa.me/5531994650007"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="hover:text-primary transition-colors"
+								>
+									WhatsApp: (31) 99465-0007
+								</a>
+							</div>
+							<div className="flex items-center gap-4">
+								<Instagram className="h-6 w-6 text-primary" />
+								<a
+									href="https://www.instagram.com/geraldinho_manutencoes"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="hover:text-primary transition-colors"
+								>
+									@geraldinho_manutencoes
+								</a>
 							</div>
 							<div className="flex items-center gap-4">
 								<MapPin className="h-6 w-6 text-primary" />
-								<span>Belo Horizonte e Região Metropolitana, MG</span>
-							</div>
-							<div className="flex items-center gap-4">
-								<a
-									href="/"
-									className="text-muted-foreground hover:text-primary transition-colors"
-								>
-									<Instagram className="h-6 w-6" />
-									<span>Instagram</span>
-								</a>
+								<span>
+									Atendemos em Belo Horizonte-MG e Região Metropolitana
+								</span>
 							</div>
 						</div>
 					</div>
