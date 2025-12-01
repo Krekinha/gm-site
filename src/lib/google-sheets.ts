@@ -3,7 +3,7 @@ export interface SheetData {
 	name: string;
 	email: string;
 	message: string;
-	timestamp?: string;
+	criadoEm: string;
 }
 
 export async function appendToSheet(data: SheetData) {
@@ -25,7 +25,6 @@ export async function appendToSheet(data: SheetData) {
 				email: data.email,
 				mensagem: data.message,
 				criadoEm:
-					data.timestamp ||
 					new Date().toLocaleString("pt-BR", {
 						timeZone: "America/Sao_Paulo",
 					}),
