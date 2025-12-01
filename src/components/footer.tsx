@@ -12,12 +12,16 @@ const Footer = () => {
 					<div className="flex flex-col items-center md:items-start space-y-4">
 						<Logo />
 						<p className="text-center md:text-left text-sm text-primary-foreground">
-							Manutenções Elétricas e Industriais em Belo Horizonte e Região.
+							Manutenções e Instalações Elétricas Para Sua Empresa
+						</p>
+						<p className="text-center md:text-left text-sm text-primary-foreground">
+							Atendemos em Belo Horizonte-MG e Região Metropolitana.
 						</p>
 						<Separator className="bg-primary-foreground/20" />
 						<div className="text-center md:text-left text-sm text-primary-foreground/80 space-y-1">
-							<p>RUA SÃO PAULO, 500, bairro SANTA CRUZ</p>
-							<p>BETIM/MG, CEP 32667-368</p>
+							<p>RUA SÃO PAULO, 500, SANTA CRUZ</p>
+							<p>BETIM/MG</p>
+							<p>CEP 32667-368</p>
 							<p className="pt-2 font-semibold">CNPJ 37.097.718/0001-58</p>
 						</div>
 					</div>

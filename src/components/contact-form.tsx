@@ -5,6 +5,7 @@ import { Loader2 } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { sendEmail } from "@/actions/send-email";
 import { Button } from "@/components/ui/button";
 import {
 	Form,
@@ -50,19 +51,24 @@ export function ContactForm() {
 
 	async function onSubmit(values: z.infer<typeof formSchema>) {
 		setIsSubmitting(true);
-		// Here you would typically send the data to your backend or a service like Formspree, Resend, etc.
-		// For this example, we'll just simulate a delay and show a toast.
-		await new Promise((resolve) => setTimeout(resolve, 1500));
 
-		console.log(values);
+		const result = await sendEmail(values);
 
 		setIsSubmitting(false);
-		form.reset();
 
-		toast({
-			title: "Mensagem Enviada!",
-			description: "Obrigado por entrar em contato. Retornaremos em breve.",
-		});
+		if (result.success) {
+			form.reset();
+			toast({
+				title: "Mensagem Enviada!",
+				description: "Obrigado por entrar em contato. Retornaremos em breve.",
+			});
+		} else {
+			toast({
+				title: "Erro ao Enviar",
+				description: result.error || "Ocorreu um erro. Tente novamente.",
+				variant: "destructive",
+			});
+		}
 	}
 
 	return (
