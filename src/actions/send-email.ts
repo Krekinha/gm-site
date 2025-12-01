@@ -2,6 +2,7 @@
 
 import { Resend } from "resend";
 import { z } from "zod";
+import { appendToSheet } from "@/lib/google-sheets";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -52,6 +53,18 @@ export async function sendEmail(data: FormData) {
 			};
 		}
 
+		// Save to Google Sheets (non-blocking, won't fail the request if it errors)
+		const sheetResult = await appendToSheet({
+			name: validatedData.name,
+			email: validatedData.email,
+			message: validatedData.message,
+		});
+
+		if (!sheetResult.success) {
+			console.error("Failed to save to sheet:", sheetResult.error);
+			// Don't fail the entire request, just log the error
+		}
+
 		return { success: true };
 	} catch (error) {
 		console.error("Send email error:", error);
@@ -60,6 +73,7 @@ export async function sendEmail(data: FormData) {
 			return {
 				success: false,
 				error: "Dados inválidos. Verifique os campos.",
+				fields: error.flatten().fieldErrors,
 			};
 		}
 

@@ -63,6 +63,18 @@ export function ContactForm() {
 				description: "Obrigado por entrar em contato. Retornaremos em breve.",
 			});
 		} else {
+			if (result.fields) {
+				// Handle server-side validation errors
+				for (const [key, messages] of Object.entries(result.fields)) {
+					if (messages && messages.length > 0) {
+						form.setError(key as keyof z.infer<typeof formSchema>, {
+							type: "server",
+							message: messages[0],
+						});
+					}
+				}
+			}
+
 			toast({
 				title: "Erro ao Enviar",
 				description: result.error || "Ocorreu um erro. Tente novamente.",
