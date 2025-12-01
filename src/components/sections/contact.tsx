@@ -61,7 +61,7 @@ const Contact = () => {
 								</a>
 							</div>
 							<div className="flex items-center gap-4">
-								<MapPin className="h-6 w-6 text-primary" />
+								<MapPin className="flex-shrink-0 h-6 w-6 text-primary" />
 								<span>
 									Atendemos em Belo Horizonte-MG e Região Metropolitana
 								</span>
