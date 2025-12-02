@@ -6,7 +6,7 @@ const complianceItems = [
 		icon: <BadgeCheck className="h-10 w-10 text-primary" />,
 		title: "Normas Regulamentadoras (NRs)",
 		description:
-			"Nossa equipe é treinada e certificada nas principais NRs (como NR-10 e NR-35), garantindo a máxima segurança em todos os serviços.",
+			"Nossa equipe é treinada e certificada nas principais NRs (como NR-10, NR-18, NR-35, etc), garantindo a máxima segurança em todos os serviços prestados.",
 	},
 	{
 		icon: <HardHat className="h-10 w-10 text-primary" />,
