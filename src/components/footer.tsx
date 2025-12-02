@@ -30,8 +30,8 @@ const Footer = () => {
 						<p className="text-center md:text-left text-sm text-primary-foreground">
 							Atendemos em Belo Horizonte-MG e Região Metropolitana.
 						</p>
-						<Separator className="bg-primary-foreground/20" />
-						<div className="text-center md:text-left text-sm text-primary-foreground/80 space-y-1">
+						<Separator className="bg-primary-foreground/20 w-1/3" />
+						<div className="text-center mb-4 md:text-left text-sm text-primary-foreground/80 space-y-1">
 							<p>Rua São Paulo, 500, Santa Cruz</p>
 							<p>Betim/MG</p>
 							<p>CEP 32667-368</p>

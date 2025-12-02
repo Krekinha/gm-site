@@ -29,11 +29,11 @@ const Compliance = () => {
 						técnica e legal.
 					</p>
 				</div>
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div className="flex flex-col md:flex-row gap-8 justify-center">
 					{complianceItems.map((item, index) => (
 						<Card
 							key={item.title}
-							className="text-center hover:shadow-lg transition-shadow duration-300"
+							className="text-center hover:shadow-lg max-w-[380px] transition-shadow duration-300"
 						>
 							<CardHeader className="items-center">
 								{item.icon}

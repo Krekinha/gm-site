@@ -27,7 +27,7 @@ const About = () => {
 									[shape-margin:1rem]
 								"
 							/>
-							<p className="mb-6">
+							<p className="mb-2 text-justify md:text-left">
 								Fundada em 2020 por <strong>Jose Geraldo Aleixo</strong>{" "}
 								(Geraldinho), um profissional com vasta experiência no setor, a{" "}
 								<strong>GM Manutenções</strong> nasceu da paixão por oferecer
@@ -43,19 +43,22 @@ const About = () => {
 								className="
 									block md:hidden
 									mx-auto
-									w-auto h-[200px]
+									w-auto h-[260px]
 									mb-6
 								"
 							/>
 
-							<p>
+							<p className="mb-2 text-justify md:text-left">
 								A dedicação à segurança, à eficiência e à satisfação do cliente
 								nos permitiu expandir nossa equipe e nosso portfólio de
 								serviços, passando a atender empresas e indústrias de pequeno e
-								grande porte. Hoje, operamos com uma equipe qualificada e
-								equipamentos de ponta, mantendo o compromisso original do nosso
-								fundador: entregar um trabalho confiável, dentro das normas e
-								com a agilidade que o seu negócio precisa.
+								grande porte.
+							</p>
+							<p className="text-justify md:text-left">
+								Hoje a GM Manutenções opera com uma equipe qualificada e 
+								equipamentos de ponta, mantendo o compromisso original: entregar 
+								um trabalho confiável, dentro das normas e com a agilidade que 
+								o seu negócio precisa.
 							</p>
 						</div>
 					</div>
