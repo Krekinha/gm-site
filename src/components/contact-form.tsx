@@ -41,7 +41,7 @@ export function ContactForm() {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const form = useForm<z.infer<typeof formSchema>>({
-		resolver: zodResolver(formSchema),
+		// Removed resolver to handle validation manually and avoid the uncaught promise error
 		defaultValues: {
 			name: "",
 			email: "",
@@ -50,8 +50,29 @@ export function ContactForm() {
 	});
 
 	async function onSubmit(values: z.infer<typeof formSchema>) {
+		console.log("Submitting values:", values);
 		setIsSubmitting(true);
 
+		// Manual Client-side Validation
+		const validationResult = formSchema.safeParse(values);
+
+		if (!validationResult.success) {
+			console.log("Validation failed:", validationResult.error.flatten());
+
+			// Map Zod errors to React Hook Form errors
+			validationResult.error.issues.forEach((issue) => {
+				const path = issue.path[0] as keyof z.infer<typeof formSchema>;
+				form.setError(path, {
+					type: "manual",
+					message: issue.message,
+				});
+			});
+
+			setIsSubmitting(false);
+			return; // Stop submission
+		}
+
+		// Proceed with valid data
 		const result = await sendEmail(values);
 
 		setIsSubmitting(false);
@@ -63,6 +84,7 @@ export function ContactForm() {
 				description: "Obrigado por entrar em contato. Retornaremos em breve.",
 			});
 		} else {
+			console.log("TESTE");
 			if (result.fields) {
 				// Handle server-side validation errors
 				for (const [key, messages] of Object.entries(result.fields)) {
@@ -91,7 +113,7 @@ export function ContactForm() {
 					name="name"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Seu Nome</FormLabel>
+							<FormLabel>Nome/Empresa</FormLabel>
 							<FormControl>
 								<Input placeholder="Seu Nome" {...field} />
 							</FormControl>
@@ -104,7 +126,7 @@ export function ContactForm() {
 					name="email"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Seu E-mail</FormLabel>
+							<FormLabel>E-mail</FormLabel>
 							<FormControl>
 								<Input placeholder="seu@email.com" {...field} />
 							</FormControl>
@@ -117,7 +139,7 @@ export function ContactForm() {
 					name="message"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Sua Mensagem</FormLabel>
+							<FormLabel>Mensagem</FormLabel>
 							<FormControl>
 								<Textarea
 									placeholder="Conte-nos como podemos ajudar..."

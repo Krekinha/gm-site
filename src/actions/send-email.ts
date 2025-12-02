@@ -27,8 +27,11 @@ type FormData = z.infer<typeof formSchema>;
 
 export async function sendEmail(data: FormData) {
 	try {
+		console.log("Received data:", data);
 		// Validate data on the server
 		const validatedData = formSchema.parse(data);
+
+		console.log("Validated data:", validatedData);
 
 		// Send email using Resend
 		const { error } = await resend.emails.send({
