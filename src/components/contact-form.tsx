@@ -50,14 +50,12 @@ export function ContactForm() {
 	});
 
 	async function onSubmit(values: z.infer<typeof formSchema>) {
-		console.log("Submitting values:", values);
 		setIsSubmitting(true);
 
 		// Manual Client-side Validation
 		const validationResult = formSchema.safeParse(values);
 
 		if (!validationResult.success) {
-			console.log("Validation failed:", validationResult.error.flatten());
 
 			// Map Zod errors to React Hook Form errors
 			validationResult.error.issues.forEach((issue) => {
