@@ -17,9 +17,10 @@ const About = () => {
 								src="/images/sections/about/mold-gm-atual.png"
 								alt="GM Manutenções - Atual"
 								className="
-									float-none mx-auto md:float-right 
-									w-auto h-[200px] md:h-[275px] 
-									md:ml-6 
+									hidden md:block
+									float-right
+									w-auto md:h-[275px] 
+									ml-6 
 									mb-4
 									[shape-outside:url('/images/sections/about/mold-gm-atual.png')]
 									[shape-image-threshold:0.5]
@@ -35,6 +36,18 @@ const About = () => {
 								como uma operação individual, focada em pequenos reparos,
 								rapidamente evoluiu.
 							</p>
+
+							<img
+								src="/images/sections/about/mold-gm-atual.png"
+								alt="GM Manutenções - Atual"
+								className="
+									block md:hidden
+									mx-auto
+									w-auto h-[200px]
+									mb-6
+								"
+							/>
+
 							<p>
 								A dedicação à segurança, à eficiência e à satisfação do cliente
 								nos permitiu expandir nossa equipe e nosso portfólio de

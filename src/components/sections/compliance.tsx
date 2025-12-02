@@ -9,16 +9,10 @@ const complianceItems = [
 			"Nossa equipe é treinada e certificada nas principais NRs (como NR-10 e NR-35), garantindo a máxima segurança em todos os serviços.",
 	},
 	{
-		icon: <FileText className="h-10 w-10 text-primary" />,
-		title: "CREA-MG e ART",
-		description:
-			"Estamos devidamente registrados no CREA-MG e contamos com o apoio de engenheiros qualificados para emitir ARTs em nossos projetos.",
-	},
-	{
 		icon: <HardHat className="h-10 w-10 text-primary" />,
-		title: "Qualificação Profissional",
+		title: "Conformidade em SST",
 		description:
-			"Investimos constantemente na qualificação dos nossos técnicos para estarem sempre atualizados com as melhores práticas e tecnologias do mercado.",
+			"Estamos devidamente registrados no CREA-MG e contamos com o suporte de Técnico em Segurança do Trabalho e de Engenheiro qualificado para emissão de ART's em nossos projetos.",
 	},
 ];
 
