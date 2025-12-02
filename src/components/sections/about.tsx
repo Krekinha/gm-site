@@ -17,9 +17,9 @@ const About = () => {
 								src="/images/sections/about/mold-gm-atual.png"
 								alt="GM Manutenções - Atual"
 								className="
-									float-right
+									float-none mx-auto md:float-right 
 									w-auto h-[200px] md:h-[275px] 
-									ml-6 
+									md:ml-6 
 									mb-4
 									[shape-outside:url('/images/sections/about/mold-gm-atual.png')]
 									[shape-image-threshold:0.5]

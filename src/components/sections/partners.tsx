@@ -48,7 +48,7 @@ const Partners = () => {
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-12">
 					<h2 className="text-3xl md:text-4xl font-bold text-primary">
-						Empresas Parceiras
+						Empresas que Confiam na GM
 					</h2>
 					<p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
 						Construímos relações de confiança com empresas que valorizam a
@@ -59,7 +59,7 @@ const Partners = () => {
 					{partners.map((partner) => (
 						<Card
 							key={partner.name}
-							className="flex items-center justify-center p-4"
+							className="flex items-center justify-center p-4 bg-gray-200/75 border-0"
 						>
 							<div className="relative h-16 w-40">
 								<Image

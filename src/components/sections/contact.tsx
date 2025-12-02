@@ -46,7 +46,7 @@ const Contact = () => {
 									rel="noopener noreferrer"
 									className="hover:text-primary transition-colors"
 								>
-									WhatsApp: (31) 99465-0007
+									(31) 99465-0007
 								</a>
 							</div>
 							<div className="flex items-center gap-4">

@@ -1,4 +1,12 @@
-import { Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import {
+	Building2,
+	Headset,
+	Instagram,
+	Mail,
+	MapPin,
+	MessageCircle,
+	Phone,
+} from "lucide-react";
 import Link from "next/link";
 import Logo from "./logo";
 import { Separator } from "./ui/separator";
@@ -14,17 +22,18 @@ const Footer = () => {
 					</div>
 
 					{/* Column 2: Address & Info */}
-					<div className="flex flex-col items-center md:items-start space-y-4">
-						<p className="text-center md:text-left text-sm text-primary-foreground">
-							Manutenções e Instalações Elétricas Para Sua Empresa
-						</p>
+					<div className="flex flex-col items-center md:items-start space-y-2">
+						<div className="flex items-center gap-2 mb-4 text-primary-foreground">
+							<MapPin className="h-5 w-5" />
+							<h3 className="font-semibold text-lg">Endereço</h3>
+						</div>
 						<p className="text-center md:text-left text-sm text-primary-foreground">
 							Atendemos em Belo Horizonte-MG e Região Metropolitana.
 						</p>
 						<Separator className="bg-primary-foreground/20" />
 						<div className="text-center md:text-left text-sm text-primary-foreground/80 space-y-1">
-							<p>RUA SÃO PAULO, 500, SANTA CRUZ</p>
-							<p>BETIM/MG</p>
+							<p>Rua São Paulo, 500, Santa Cruz</p>
+							<p>Betim/MG</p>
 							<p>CEP 32667-368</p>
 							<p className="pt-2 font-semibold">CNPJ 37.097.718/0001-58</p>
 						</div>
@@ -32,11 +41,12 @@ const Footer = () => {
 					</div>
 
 					{/* Column 3: Navigation Links */}
-					<div className="text-center md:text-left">
-						<h3 className="font-semibold text-primary-foreground text-lg mb-4">
-							A Empresa
-						</h3>
-						<ul className="space-y-2 text-sm text-primary-foreground/80">
+					<div className="flex flex-col items-center md:items-start">
+						<div className="flex items-center gap-2 mb-4 text-primary-foreground">
+							<Building2 className="h-5 w-5" />
+							<h3 className="font-semibold text-lg">A Empresa</h3>
+						</div>
+						<ul className="space-y-2 text-sm text-primary-foreground/80 text-center md:text-left">
 							<li>
 								<Link
 									href="#about"
@@ -92,9 +102,10 @@ const Footer = () => {
 					{/* Column 4: Contact & Socials */}
 					<div className="flex flex-col items-center md:items-start">
 						<div className="w-fit">
-							<h3 className="font-semibold text-primary-foreground text-lg mb-4 text-center md:text-left">
-								Contato
-							</h3>
+							<div className="flex items-center justify-center md:justify-start gap-2 mb-4 text-primary-foreground">
+								<Headset className="h-5 w-5" />
+								<h3 className="font-semibold text-lg">Contato</h3>
+							</div>
 							<ul className="space-y-4 text-sm text-primary-foreground/80">
 								<li>
 									<a
