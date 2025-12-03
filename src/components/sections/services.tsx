@@ -12,38 +12,38 @@ import {
 
 const services = [
 	{
-		image: "/images/servicos/manutencao-em-subestacoes-de-media-tensao.jpg",
+		image: "/images/servicos/service-subestacao.png",
 		title: "Manutenção em Subestações de Média Tensão",
 		description:
 			"Realizamos manutenção corretiva e preventiva em subestações de 13.8 kV, incluindo troca de fusíveis, chaves seccionadoras, coleta de óleo isolante, reaperto de conexões elétricas, troca de guarnições e buchas de porcelana em alta e baixa tensão, além de ensaios elétricos com instrumentos como mili-ohmímetro, micro-ohmímetro, TTR e fonte de corrente para garantir segurança e performance.",
 	},
 	{
-		image: "/images/servicos/projeto-e-construcao-de-subestacoes.png",
+		image: "/images/servicos/service-construcao.png",
 		title: "Projeto e Construção de Subestações",
 		description:
 			"Desenvolvemos projetos completos, construção de subestações e liberação de carga junto à concessionária CEMIG, garantindo conformidade e eficiência desde o planejamento até a execução.",
 	},
 	{
-		image: "/images/servicos/manutencao-em-rda.jpg",
+		image: "/images/servicos/service-rda-2.png",
 		title: "Manutenção em Redes Aéreas de Distribuição (RDA)",
 		description:
 			"Executamos construção e manutenção corretiva em redes aéreas de 13.8 kV, com serviços como substituição de cabos, troca de elos fusíveis, chaves fusíveis, para-raios, instalação de para-raios, manutenção e substituição de transformadores para minimizar interrupções.",
 	},
 	{
 		image:
-			"/images/servicos/manutencao-em-instalacoes-eletricas-industriais.png",
+			"/images/servicos/service-manutencao.png",
 		title: "Manutenção em Instalações Elétricas Industriais",
 		description:
 			"Criamos projetos para novas instalações elétricas em ambientes industriais, atendendo máquinas de pequeno e grande porte, com infraestrutura completa incluindo eletrodutos e eletrocalhas. Também realizamos correções e readequações em sistemas existentes para otimizar desempenho e segurança.",
 	},
 	{
-		image: "/images/servicos/construcao-de-paineis-eletricos.jpg",
+		image: "/images/servicos/service-painel.png",
 		title: "Construção de Painéis Elétricos",
 		description:
 			"Projetamos, construímos e instalamos painéis elétricos personalizados, incluindo readequação de sistemas elétrico de potência, para aplicações industriais robustas e eficientes.",
 	},
 	{
-		image: "/images/servicos/spda.png",
+		image: "/images/servicos/service-spda.png",
 		title: "SPDA - Sistema de Proteção contra Descargas Atmosféricas",
 		description:
 			"Oferecemos manutenção, correção, instalação e emissão de laudos técnicos para SPDA, garantindo proteção efetiva contra raios e conformidade com normas de segurança.",
