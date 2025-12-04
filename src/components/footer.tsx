@@ -19,10 +19,11 @@ const Footer = () => {
 					{/* Column 1: Logo */}
 					<div className="flex flex-col items-center md:items-start">
 						<Logo />
+						<Separator className="md:hidden bg-primary-foreground/20 w-full mt-8" />
 					</div>
 
 					{/* Column 2: Address & Info */}
-					<div className="flex flex-col items-center md:items-start space-y-2">
+					<div className="flex flex-col items-center md:items-start">
 						<div className="flex items-center gap-2 mb-4 text-primary-foreground">
 							<MapPin className="h-5 w-5" />
 							<h3 className="font-semibold text-lg">Endereço</h3>
@@ -30,17 +31,17 @@ const Footer = () => {
 						<p className="text-center md:text-left text-sm text-primary-foreground">
 							Atendemos em Belo Horizonte-MG e Região Metropolitana.
 						</p>
-						<Separator className="bg-primary-foreground/20 w-1/3" />
-						<div className="text-center mb-4 md:text-left text-sm text-primary-foreground/80 space-y-1">
+						<Separator className="bg-primary-foreground/20 w-1/3 mt-3 mb-3" />
+						<div className="text-center md:text-left text-sm text-primary-foreground/80 space-y-1">
 							<p>Rua São Paulo, 500, Santa Cruz</p>
 							<p>Betim/MG</p>
 							<p>CEP 32667-368</p>
 							<p className="pt-2 font-semibold">CNPJ 37.097.718/0001-58</p>
 						</div>
-						<Separator className="md:hidden bg-primary-foreground/20 w-full mt-4" />
+						<Separator className="md:hidden bg-primary-foreground/20 w-full mt-8" />
 					</div>
 
-					{/* Column 3: Navigation Links */}
+					{/* Column 3: A Empresa */}
 					<div className="flex flex-col items-center md:items-start">
 						<div className="flex items-center gap-2 mb-4 text-primary-foreground">
 							<Building2 className="h-5 w-5" />

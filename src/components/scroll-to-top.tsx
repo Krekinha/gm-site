@@ -34,7 +34,7 @@ const ScrollToTop = () => {
 			variant="default"
 			size="icon"
 			className={cn(
-				"fixed bottom-4 right-20 rounded-full shadow-lg transition-opacity duration-300 z-50",
+				"fixed bottom-4 right-20 rounded-full shadow-lg transition-opacity duration-300 z-50 border border-primary-foreground/20",
 				"bg-primary hover:bg-primary/90",
 				isVisible ? "opacity-100" : "opacity-0 pointer-events-none",
 			)}
