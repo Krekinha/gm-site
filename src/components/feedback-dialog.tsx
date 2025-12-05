@@ -1,9 +1,10 @@
 "use client";
 
-import { Loader2, Star, Upload } from "lucide-react";
+import { Loader2, Star } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { submitFeedback } from "@/actions/submit-feedback";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -115,10 +116,26 @@ export function FeedbackDialog({ children }: FeedbackDialogProps) {
 			return; // Stop submission
 		}
 
-		// Simulate API call
-		await new Promise((resolve) => setTimeout(resolve, 2000));
+		// Submit to Google Sheets via server action
+		const result = await submitFeedback({
+			name: values.name,
+			roleCompany: values.roleCompany,
+			rating: values.rating,
+			testimonial: values.testimonial,
+			email: values.email,
+			authorization: values.authorization,
+			// Note: photo upload would require additional handling (e.g., upload to cloud storage)
+		});
 
-		console.log("Feedback submitted:", values);
+		if (!result.success) {
+			toast({
+				title: "Erro ao enviar",
+				description: result.error || "Tente novamente mais tarde.",
+				variant: "destructive",
+			});
+			setIsSubmitting(false);
+			return;
+		}
 
 		setIsSubmitting(false);
 		setOpen(false);
