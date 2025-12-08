@@ -1,12 +1,11 @@
 import { google } from "googleapis";
 
-// Interface for contact form data (used with SheetDB)
+// Interface for quote/contact form data
 export interface SheetData {
 	id?: string;
 	name: string;
 	email: string;
 	message: string;
-	criadoEm: string;
 }
 
 // Interface for feedback/testimonial data
@@ -94,51 +93,42 @@ export async function appendFeedbackToSheet(data: FeedbackData) {
 	}
 }
 
-// Original function for contact form (uses SheetDB)
+// Append quote/contact to Google Sheets using the official API
 export async function appendToSheet(data: SheetData) {
-	const SHEETDB_API_URL = process.env.SHEETDB_API_URL;
+	const spreadsheetId = process.env.GOOGLE_SHEET_ORCAMENTOS;
 
-	if (!SHEETDB_API_URL) {
-		console.error("SHEETDB_API_URL not configured");
+	if (!spreadsheetId) {
+		console.error("GOOGLE_SHEET_ORCAMENTOS not configured");
 		return {
 			success: false,
-			error: "Configuração de planilha não encontrada",
+			error: "Configuração da planilha não encontrada",
 		};
 	}
 
 	try {
-		const payload = {
-			data: {
-				id: data.id || crypto.randomUUID(),
-				nome: data.name,
-				email: data.email,
-				mensagem: data.message,
-				criadoEm: new Date().toLocaleString("pt-BR", {
-					timeZone: "America/Sao_Paulo",
-				}),
-			},
-		};
+		const sheets = await getGoogleSheetsClient();
 
-		const response = await fetch(SHEETDB_API_URL, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(payload),
+		const id = data.id || crypto.randomUUID();
+		const criadoEm = new Date().toLocaleString("pt-BR", {
+			timeZone: "America/Sao_Paulo",
 		});
 
-		if (!response.ok) {
-			const errorText = await response.text();
-			console.error("SheetDB error:", errorText);
-			return {
-				success: false,
-				error: "Erro ao salvar na planilha",
-			};
-		}
+		// Values in the order of spreadsheet columns:
+		// id, nome, email, mensagem, criadoEm
+		const values = [[id, data.name, data.email, data.message, criadoEm]];
+
+		await sheets.spreadsheets.values.append({
+			spreadsheetId,
+			range: "A:E", // Columns A through E
+			valueInputOption: "USER_ENTERED",
+			requestBody: {
+				values,
+			},
+		});
 
 		return { success: true };
 	} catch (error) {
-		console.error("SheetDB error:", error);
+		console.error("Google Sheets API error:", error);
 		return {
 			success: false,
 			error: "Erro ao salvar na planilha",
