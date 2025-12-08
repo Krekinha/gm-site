@@ -41,10 +41,10 @@ async function getGoogleSheetsClient() {
 
 // Append feedback to Google Sheets using the official API
 export async function appendFeedbackToSheet(data: FeedbackData) {
-	const spreadsheetId = process.env.GOOGLE_SPREADSHEET_ID;
+	const spreadsheetId = process.env.GOOGLE_SHEET_DEPOIMENTOS;
 
 	if (!spreadsheetId) {
-		console.error("GOOGLE_SPREADSHEET_ID not configured");
+		console.error("GOOGLE_SHEET_DEPOIMENTOS not configured");
 		return {
 			success: false,
 			error: "Configuração da planilha não encontrada",
