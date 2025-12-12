@@ -23,7 +23,13 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>;
 
-export async function sendEmail(data: FormData) {
+export type ActionResponse = {
+	success: boolean;
+	error?: string;
+	fields?: Record<string, string[] | undefined>;
+};
+
+export async function sendEmail(data: FormData): Promise<ActionResponse> {
 	try {
 		// Validate data on the server
 		const validatedData = formSchema.parse(data);
