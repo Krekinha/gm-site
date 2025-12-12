@@ -36,7 +36,7 @@ export async function sendEmail(data: FormData): Promise<ActionResponse> {
 
 		// Send email using Gmail API
 		const { success: emailSent, error } = await sendGmail({
-			to: "gmmanutencoes.drive@gmail.com",
+			to: "krekmg@gmail.com",
 			replyTo: validatedData.email,
 			subject: `Novo orçamento de ${validatedData.name}`,
 			html: `
