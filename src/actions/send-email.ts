@@ -1,10 +1,8 @@
 "use server";
 
-import { Resend } from "resend";
 import { z } from "zod";
+import { sendGmail } from "@/lib/gmail";
 import { appendToSheet } from "@/lib/google-sheets";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 const formSchema = z.object({
 	name: z.string().min(2, {
@@ -30,11 +28,10 @@ export async function sendEmail(data: FormData) {
 		// Validate data on the server
 		const validatedData = formSchema.parse(data);
 
-		// Send email using Resend
-		const { error } = await resend.emails.send({
-			from: "GM Manutenções <onboarding@resend.dev>", // Use your verified domain
-			to: ["gmmanutencoes.drive@gmail.com"], // Testing email
-			replyTo: validatedData.email, // User's email for replies
+		// Send email using Gmail API
+		const { success: emailSent, error } = await sendGmail({
+			to: "gmmanutencoes.drive@gmail.com",
+			replyTo: validatedData.email,
 			subject: `Novo orçamento de ${validatedData.name}`,
 			html: `
 				<h2>Novo pedido de orçamento</h2>
@@ -45,8 +42,8 @@ export async function sendEmail(data: FormData) {
 			`,
 		});
 
-		if (error) {
-			console.error("Resend error:", error);
+		if (!emailSent) {
+			console.error("Gmail error:", error);
 			return {
 				success: false,
 				error: "Erro ao enviar e-mail. Tente novamente.",
